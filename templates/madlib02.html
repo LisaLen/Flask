@@ -1,13 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>MadLib</title>
-    <link rel="stylesheet" href="/static/madlibs.css">
-</head>
-<body>
+
+{% extends 'base.html' %}
+
+{% block title %} Madlib 2 {% endblock %}
+
+{% block style %}
+
+p {
+        color: yellow;
+
+    }
+
+{% endblock %}
+
+
+
+{% block content %}
+
      <p> There once was a {{ color }}<br> {{ noun }} sitting in the Hackbright Lab.<br>
 When {{ person }} went to pick it up,<br> it burst into flames in a totally<br>
 {{ adjective }} way.{{ story }} </p>
 
-</body>
-</html>
+{% endblock %}
+

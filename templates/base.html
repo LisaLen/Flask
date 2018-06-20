@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title> {% block title %} Madlib Title Goes Here {% endblock %} </title>
+    <link rel="stylesheet" href="/static/madlibs.css" >
+    <style>{% block style %}OurStyle{% endblock %}></style>
+
 </head>
 <body>
     {% block content %} Madlib Content Goes Here {% endblock %}

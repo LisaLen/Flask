@@ -39,7 +39,7 @@ def greet_person():
 
     return render_template("compliment.html",
                            person=player,
-                           compliment=', '.join(compliment))
+                           compliments=compliment)
 @app.route('/game')
 def show_madlib_form():
 
@@ -51,12 +51,13 @@ def show_madlib_form():
         return render_template("game.html")
 
 
-    return 
-
+    
 @app.route('/madlib')
 def show_madlib():
     person = request.args.get("person_name")
-    color = request.args.get("color").lower()
+    color = request.args.get("color").lower().split()
+    print(request.args)
+    print(type(request.args))
     noun = request.args.get("noun").lower()
     adj = request.args.get("adj").lower()
     story = request.args.get("story")
